@@ -14,14 +14,29 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.text-glow {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7), 0 0 16px rgba(255, 255, 255, 0.5);
+}
+
+/* Ajoute un fond d'étoiles animées (optionnel) */
+@keyframes star-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2000px 0; /* Réglage de la position finale pour un défilement fluide */
+  }
+}
+
+.bg-starfield {
+  background: url('/starfield-bg.jpg') repeat;
+  /* background-size: ; */
+  background-position: center;
+  animation: star-animation 200s linear infinite;
 }
