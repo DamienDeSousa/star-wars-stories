@@ -11,6 +11,13 @@ export const metadata: Metadata = {
   keywords: ["Star Wars", "Star Wars fiction", "Star Wars story", "Despot War"],
   creator: "Damien DE SOUSA",
   icons: "icon.png",
+  openGraph: {
+    type: "website",
+    title: "Star Wars fiction",
+    description: "Star Wars story made by a fan for the fans",
+    url: "https://star-wars-stories.vercel.app",
+    images: "/icon.png",
+  },
 };
 
 export default function RootLayout({
