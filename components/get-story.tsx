@@ -27,12 +27,12 @@ export const GetStory = () => {
   };
 
   return (
-    <div className="flex items-center justify-center gap-6">
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
             size={"lg"}
-            className="transition duration-300 transform hover:scale-105"
+            className="w-full sm:w-auto transition duration-300 transform hover:scale-105"
           >
             {t("download")}
           </Button>
@@ -48,7 +48,7 @@ export const GetStory = () => {
       </DropdownMenu>
       <Button
         size={"lg"}
-        className="transition duration-300 transform hover:scale-105"
+        className="w-full sm:w-auto transition duration-300 transform hover:scale-105"
         onClick={() => router.push("/reader")}
       >
         {t("read-online")}
