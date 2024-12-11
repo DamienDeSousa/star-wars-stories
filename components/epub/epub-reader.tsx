@@ -1,6 +1,7 @@
 "use client";
 
 import ePub, { Rendition } from "epubjs";
+import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "../ui/button";
 
@@ -10,8 +11,10 @@ type EpubReaderProps = {
 
 const EpubReader = (props: EpubReaderProps) => {
   const { url } = props;
+
   const viewerRef = useRef(null);
   const [rendition, setRendition] = useState<Rendition | null>(null);
+  const t = useTranslations("Common");
 
   useEffect(() => {
     const book = ePub(url);
@@ -61,10 +64,10 @@ const EpubReader = (props: EpubReaderProps) => {
 
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-4">
         <Button size={"lg"} onClick={handlePrev}>
-          Précedent
+          {t("previous")}
         </Button>
         <Button size={"lg"} onClick={handleNext} style={{ marginLeft: 10 }}>
-          Suivant
+          {t("next")}
         </Button>
       </div>
     </div>
