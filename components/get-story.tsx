@@ -46,7 +46,11 @@ export const GetStory = () => {
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-      <Button size={"lg"} onClick={() => router.push("/reader")}>
+      <Button
+        size={"lg"}
+        className="transition duration-300 transform hover:scale-105"
+        onClick={() => router.push("/reader")}
+      >
         {t("read-online")}
       </Button>
     </div>
