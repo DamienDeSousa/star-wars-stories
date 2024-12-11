@@ -25,9 +25,8 @@ const EpubReader = (props: EpubReaderProps) => {
 
       const lightTheme = {
         body: {
-          // background: "#ffffff",
-          // color: "#000000",
-          color: "#F5F8FF",
+          background: "rgba(222, 230, 243, 0.8)",
+          color: "#161A21",
         },
       };
 
@@ -54,10 +53,10 @@ const EpubReader = (props: EpubReaderProps) => {
   };
 
   return (
-    <div className="flex justify-center relative w-screen h-screen">
+    <div className="flex justify-center relative w-screen h-screen p-2">
       <div
         ref={viewerRef}
-        className="w-full h-[90%] overflow-auto text-primary-foreground"
+        className="w-full h-[90%] overflow-auto text-primary-foreground rounded-lg"
       ></div>
 
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-4">

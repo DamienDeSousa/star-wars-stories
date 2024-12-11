@@ -1,5 +1,5 @@
 "use client";
-
+// TODO : rendre ce composant côté serveur
 import EpubReader from "@/components/epub/epub-reader";
 import { useLocale } from "next-intl";
 
