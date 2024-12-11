@@ -1,6 +1,7 @@
 {
   "Common": {
-    "download-format": "Download {format}",
+    "read-online": "Read online",
+    "download": "Download",
     "description": "Immerse yourself in this brand new story where myths and legends intersect...",
     "title": "Star Wars Fiction : The Despot War"
   }

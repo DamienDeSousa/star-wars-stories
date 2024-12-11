@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -39,4 +27,69 @@
   /* background-size: ; */
   background-position: center;
   animation: star-animation 200s linear infinite;
+}
+
+@layer base {
+  :root {
+    --background: 220 30% 90%; /* #DEE6F3 */
+    --foreground: 220 20% 10%; /* #161A21 */
+    --card: 220 30% 95%; /* #EEF3FA */
+    --card-foreground: 220 20% 10%; /* #161A21 */
+    --popover: 220 30% 95%; /* #EEF3FA */
+    --popover-foreground: 220 20% 10%; /* #161A21 */
+    --primary: 220 60% 50%; /* #3366CC */
+    --primary-foreground: 220 100% 98%; /* #F5F8FF */
+    --secondary: 240 30% 85%; /* #D1D4F0 */
+    --secondary-foreground: 220 20% 10%; /* #161A21 */
+    --muted: 220 20% 80%; /* #C2CAD6 */
+    --muted-foreground: 220 20% 40%; /* #5D6675 */
+    --accent: 280 30% 85%; /* #E0D1F0 */
+    --accent-foreground: 220 20% 10%; /* #161A21 */
+    --destructive: 0 84.2% 60.2%; /* #F03E3E */
+    --destructive-foreground: 0 0% 98%; /* #FAFAFA */
+    --border: 220 30% 70%; /* #A3B8D9 */
+    --input: 220 30% 70%; /* #A3B8D9 */
+    --ring: 220 60% 50%; /* #3366CC */
+    --chart-1: 220 70% 50%; /* #2952CC */
+    --chart-2: 280 60% 50%; /* #8033CC */
+    --chart-3: 40 80% 60%; /* #F2B705 */
+    --chart-4: 200 70% 50%; /* #05B2F2 */
+    --chart-5: 320 60% 50%; /* #CC3380 */
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 220 40% 5%; /* #06090F */
+    --foreground: 220 20% 90%; /* #DEE2E9 */
+    --card: 220 40% 10%; /* #0D131F */
+    --card-foreground: 220 20% 90%; /* #DEE2E9 */
+    --popover: 220 40% 10%; /* #0D131F */
+    --popover-foreground: 220 20% 90%; /* #DEE2E9 */
+    --primary: 220 60% 50%; /* #3366CC */
+    --primary-foreground: 220 100% 98%; /* #F5F8FF */
+    --secondary: 240 30% 20%; /* #2D3047 */
+    --secondary-foreground: 220 20% 90%; /* #DEE2E9 */
+    --muted: 220 20% 20%; /* #2B3240 */
+    --muted-foreground: 220 20% 60%; /* #8D99A8 */
+    --accent: 280 30% 20%; /* #382D47 */
+    --accent-foreground: 220 20% 90%; /* #DEE2E9 */
+    --destructive: 0 62.8% 30.6%; /* #7D1A1A */
+    --destructive-foreground: 0 0% 98%; /* #FAFAFA */
+    --border: 220 30% 30%; /* #3A4D6B */
+    --input: 220 30% 30%; /* #3A4D6B */
+    --ring: 220 60% 50%; /* #3366CC */
+    --chart-1: 220 70% 60%; /* #5280E6 */
+    --chart-2: 280 60% 60%; /* #A366E6 */
+    --chart-3: 40 80% 70%; /* #F7CC33 */
+    --chart-4: 200 70% 60%; /* #33CCF7 */
+    --chart-5: 320 60% 60%; /* #E666A3 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

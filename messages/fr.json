@@ -1,6 +1,7 @@
 {
   "Common": {
-    "download-format": "Télécharger {format}",
+    "read-online": "Lire en ligne",
+    "download": "Télécharger",
     "description": "Plongez dans cette toute nouvelle histoire où mythes et légendes se croisent...",
     "title": "Star Wars Fiction : La Guerre de la Reine-Despote"
   }

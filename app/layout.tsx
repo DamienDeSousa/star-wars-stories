@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${orbitron.className} bg-gray-800 text-white`}>
+      <body className={`${orbitron.className} bg-starfield h-screen`}>
         {children}
       </body>
     </html>
