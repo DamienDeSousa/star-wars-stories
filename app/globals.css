@@ -20,64 +20,63 @@
 
 .bg-starfield {
   background: url('/starfield-bg.jpg') repeat;
-  /* background-size: ; */
   background-position: center;
   animation: star-animation 200s linear infinite;
 }
 
 @layer base {
   :root {
-    --background: 220 30% 90%; /* #DEE6F3 */
-    --foreground: 220 20% 10%; /* #161A21 */
-    --card: 220 30% 95%; /* #EEF3FA */
-    --card-foreground: 220 20% 10%; /* #161A21 */
-    --popover: 220 30% 95%; /* #EEF3FA */
-    --popover-foreground: 220 20% 10%; /* #161A21 */
-    --primary: 220 60% 50%; /* #3366CC */
-    --primary-foreground: 220 100% 98%; /* #F5F8FF */
-    --secondary: 240 30% 85%; /* #D1D4F0 */
-    --secondary-foreground: 220 20% 10%; /* #161A21 */
-    --muted: 220 20% 80%; /* #C2CAD6 */
-    --muted-foreground: 220 20% 40%; /* #5D6675 */
-    --accent: 280 30% 85%; /* #E0D1F0 */
-    --accent-foreground: 220 20% 10%; /* #161A21 */
-    --destructive: 0 84.2% 60.2%; /* #F03E3E */
-    --destructive-foreground: 0 0% 98%; /* #FAFAFA */
-    --border: 220 30% 70%; /* #A3B8D9 */
-    --input: 220 30% 70%; /* #A3B8D9 */
-    --ring: 220 60% 50%; /* #3366CC */
-    --chart-1: 220 70% 50%; /* #2952CC */
-    --chart-2: 280 60% 50%; /* #8033CC */
-    --chart-3: 40 80% 60%; /* #F2B705 */
-    --chart-4: 200 70% 50%; /* #05B2F2 */
-    --chart-5: 320 60% 50%; /* #CC3380 */
+    --background: 210 50% 95%; /* #E6EFF8 - Bleu clair céleste */
+    --foreground: 210 50% 10%; /* #111A23 - Bleu très foncé */
+    --card: 0 0% 100%; /* #FFFFFF - Blanc pur */
+    --card-foreground: 210 50% 10%; /* #111A23 - Bleu très foncé */
+    --popover: 0 0% 100%; /* #FFFFFF - Blanc pur */
+    --popover-foreground: 210 50% 10%; /* #111A23 - Bleu très foncé */
+    --primary: 210 100% 50%; /* #0066FF - Bleu sabre laser */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF - Blanc pur */
+    --secondary: 45 100% 50%; /* #FFA500 - Or Jedi */
+    --secondary-foreground: 210 50% 10%; /* #111A23 - Bleu très foncé */
+    --muted: 210 50% 80%; /* #B3CDE0 - Bleu clair pastel */
+    --muted-foreground: 210 50% 40%; /* #4D6F8C - Bleu gris moyen */
+    --accent: 120 70% 60%; /* #66CC66 - Vert Yoda */
+    --accent-foreground: 210 50% 10%; /* #111A23 - Bleu très foncé */
+    --destructive: 0 100% 40%; /* #CC0000 - Rouge atténué */
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF - Blanc pur */
+    --border: 210 50% 80%; /* #B3CDE0 - Bleu clair pastel */
+    --input: 210 50% 80%; /* #B3CDE0 - Bleu clair pastel */
+    --ring: 210 100% 50%; /* #0066FF - Bleu sabre laser */
+    --chart-1: 210 100% 50%; /* #0066FF - Bleu sabre laser */
+    --chart-2: 45 100% 50%; /* #FFA500 - Or Jedi */
+    --chart-3: 120 70% 60%; /* #66CC66 - Vert Yoda */
+    --chart-4: 200 100% 50%; /* #00CCFF - Bleu ciel */
+    --chart-5: 270 100% 70%; /* #9966FF - Violet clair */
     --radius: 0.5rem;
   }
   .dark {
-    --background: 220 30% 90%; /* #DEE6F3 */
-    --foreground: 220 20% 10%; /* #161A21 */
-    --card: 220 30% 95%; /* #EEF3FA */
-    --card-foreground: 220 20% 10%; /* #161A21 */
-    --popover: 220 30% 95%; /* #EEF3FA */
-    --popover-foreground: 220 20% 10%; /* #161A21 */
-    --primary: 220 60% 50%; /* #3366CC */
-    --primary-foreground: 220 100% 98%; /* #F5F8FF */
-    --secondary: 240 30% 85%; /* #D1D4F0 */
-    --secondary-foreground: 220 20% 10%; /* #161A21 */
-    --muted: 220 20% 80%; /* #C2CAD6 */
-    --muted-foreground: 220 20% 40%; /* #5D6675 */
-    --accent: 280 30% 85%; /* #E0D1F0 */
-    --accent-foreground: 220 20% 10%; /* #161A21 */
-    --destructive: 0 84.2% 60.2%; /* #F03E3E */
-    --destructive-foreground: 0 0% 98%; /* #FAFAFA */
-    --border: 220 30% 70%; /* #A3B8D9 */
-    --input: 220 30% 70%; /* #A3B8D9 */
-    --ring: 220 60% 50%; /* #3366CC */
-    --chart-1: 220 70% 50%; /* #2952CC */
-    --chart-2: 280 60% 50%; /* #8033CC */
-    --chart-3: 40 80% 60%; /* #F2B705 */
-    --chart-4: 200 70% 50%; /* #05B2F2 */
-    --chart-5: 320 60% 50%; /* #CC3380 */
+    --background: 0 0% 10%; /* #1A1A1A - Noir profond */
+    --foreground: 0 0% 90%; /* #E6E6E6 - Gris très clair */
+    --card: 0 0% 15%; /* #262626 - Gris très foncé */
+    --card-foreground: 0 0% 90%; /* #E6E6E6 - Gris très clair */
+    --popover: 0 0% 15%; /* #262626 - Gris très foncé */
+    --popover-foreground: 0 0% 90%; /* #E6E6E6 - Gris très clair */
+    --primary: 0 100% 50%; /* #FF0000 - Rouge sabre laser Sith */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF - Blanc pur */
+    --secondary: 30 100% 50%; /* #FF8000 - Orange feu */
+    --secondary-foreground: 0 0% 100%; /* #FFFFFF - Blanc pur */
+    --muted: 0 0% 30%; /* #4D4D4D - Gris foncé */
+    --muted-foreground: 0 0% 60%; /* #999999 - Gris moyen */
+    --accent: 270 100% 50%; /* #8000FF - Violet électrique */
+    --accent-foreground: 0 0% 100%; /* #FFFFFF - Blanc pur */
+    --destructive: 0 100% 60%; /* #FF3333 - Rouge vif */
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF - Blanc pur */
+    --border: 0 0% 20%; /* #333333 - Gris foncé */
+    --input: 0 0% 20%; /* #333333 - Gris foncé */
+    --ring: 0 100% 50%; /* #FF0000 - Rouge sabre laser Sith */
+    --chart-1: 0 100% 50%; /* #FF0000 - Rouge sabre laser Sith */
+    --chart-2: 30 100% 50%; /* #FF8000 - Orange feu */
+    --chart-3: 270 100% 50%; /* #8000FF - Violet électrique */
+    --chart-4: 15 100% 50%; /* #FF4000 - Rouge-orange */
+    --chart-5: 45 100% 50%; /* #FFCC00 - Jaune or */
     --radius: 0.5rem;
   }
 }

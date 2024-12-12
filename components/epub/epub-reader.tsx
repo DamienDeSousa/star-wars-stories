@@ -29,18 +29,16 @@ const EpubReader = (props: EpubReaderProps) => {
       rdr.display();
       setRendition(rdr);
 
-      // const epubTheme = {
-      //   body: {
-      //     "background-color": "rgba(222, 230, 243, 0.8)",
-      //     background: theme === "light" ? "rgba(222, 230, 243, 0.8)" : "",
-      //     color: theme === "light" ? "#161A21" : "#DEE2E9",
-      //   },
-      // };
+      const epubTheme = {
+        body: {
+          background: theme === "light" ? "#E6EFF8" : "#1A1A1A",
+          color: theme === "light" ? "#111A23" : "#E6E6E6",
+        },
+      };
 
-      // rdr.themes.register("theme", epubTheme);
-      // rdr.themes.select("theme");
+      rdr.themes.register("theme", epubTheme);
+      rdr.themes.select("theme");
       rdr.themes.fontSize("150%");
-      // rdr.themes.override("background", "rgba(222, 230, 243, 0.8)", true);
     }
 
     return () => {
@@ -67,17 +65,14 @@ const EpubReader = (props: EpubReaderProps) => {
         className="w-full h-[90%] overflow-auto rounded-lg"
       ></div>
 
-      <div className="absolute top-2 right-2">
-        <ThemeButton />
-      </div>
-
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-4">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-4 items-center">
         <Button size={"lg"} onClick={handlePrev}>
           {t("previous")}
         </Button>
         <Button size={"lg"} onClick={handleNext} style={{ marginLeft: 10 }}>
           {t("next")}
         </Button>
+        <ThemeButton />
       </div>
     </div>
   );
