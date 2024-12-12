@@ -2,8 +2,10 @@
 
 import ePub, { Rendition } from "epubjs";
 import { useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "../ui/button";
+import { ThemeButton } from "../ui/theme-button";
 
 type EpubReaderProps = {
   url: string;
@@ -15,6 +17,7 @@ const EpubReader = (props: EpubReaderProps) => {
   const viewerRef = useRef(null);
   const [rendition, setRendition] = useState<Rendition | null>(null);
   const t = useTranslations("Common");
+  const { theme } = useTheme();
 
   useEffect(() => {
     const book = ePub(url);
@@ -26,22 +29,24 @@ const EpubReader = (props: EpubReaderProps) => {
       rdr.display();
       setRendition(rdr);
 
-      const lightTheme = {
-        body: {
-          background: "rgba(222, 230, 243, 0.8)",
-          color: "#161A21",
-        },
-      };
+      // const epubTheme = {
+      //   body: {
+      //     "background-color": "rgba(222, 230, 243, 0.8)",
+      //     background: theme === "light" ? "rgba(222, 230, 243, 0.8)" : "",
+      //     color: theme === "light" ? "#161A21" : "#DEE2E9",
+      //   },
+      // };
 
-      rdr.themes.register("light", lightTheme);
-      rdr.themes.select("light");
+      // rdr.themes.register("theme", epubTheme);
+      // rdr.themes.select("theme");
       rdr.themes.fontSize("150%");
+      // rdr.themes.override("background", "rgba(222, 230, 243, 0.8)", true);
     }
 
     return () => {
       book.destroy();
     };
-  }, [url]);
+  }, [theme, url]);
 
   const handleNext = () => {
     if (rendition) {
@@ -59,8 +64,12 @@ const EpubReader = (props: EpubReaderProps) => {
     <div className="flex justify-center relative w-screen h-screen p-2">
       <div
         ref={viewerRef}
-        className="w-full h-[90%] overflow-auto text-primary-foreground rounded-lg"
+        className="w-full h-[90%] overflow-auto rounded-lg"
       ></div>
+
+      <div className="absolute top-2 right-2">
+        <ThemeButton />
+      </div>
 
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-4">
         <Button size={"lg"} onClick={handlePrev}>

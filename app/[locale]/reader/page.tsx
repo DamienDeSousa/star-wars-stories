@@ -9,7 +9,7 @@ export default function Page() {
   const storyPath = `/${locale}/Despote_War.epub`;
 
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <div className="h-screen w-screen">
       <EpubReader url={storyPath} />
     </div>
   );
